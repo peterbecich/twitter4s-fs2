@@ -8,6 +8,7 @@ import com.danielasfregola.twitter4s.entities.enums.Language.Language
 import com.danielasfregola.twitter4s.entities.streaming.CommonStreamingMessage
 import com.danielasfregola.twitter4s.http.clients.streaming.statuses.parameters._
 import com.danielasfregola.twitter4s.http.clients.streaming.{StreamingClient, TwitterStream}
+import com.danielasfregola.twitter4s.http.clients.streaming.FS2._
 import com.danielasfregola.twitter4s.util.Configurations._
 
 import cats.effect.IO
@@ -17,7 +18,7 @@ object FS2 {
   implicit class TwitterStatusClientFS2(twitterStatusClient: TwitterStatusClient)
       extends TwitterStatusClient {
 
-    val streamingClient = twitterStatusClient.streamingClient
+    val streamingClient = StreamingClientFS2(twitterStatusClient.streamingClient)
 
     def sampleStatusesFS2: Unit = println("sample statuses fs2")
 
@@ -48,9 +49,15 @@ object FS2 {
       import streamingClient._
       val parameters = StatusSampleParameters(languages, stall_warnings, tracks, filter_level)
       preProcessing()
-      // Get(s"${statusUrl}/sample.json", parameters).processStreamFS2(sink)
       // see StreamingClient
-      ???
+      streamingClient.RichStreamingHttpRequestFS2(Get(s"${statusUrl}/sample.json", parameters)).processStreamFS2(sink)
+      // Get(s"${statusUrl}/sample.json", parameters).processStreamFS2(sink)
+
+      // def printTweetText: PartialFunction[StreamingMessage, Unit] = {
+      //   case tweet: com.danielasfregola.twitter4s.entities.Tweet => println(tweet.text)
+      // }
+      // Get(s"${statusUrl}/sample.json", parameters).processStream(printTweetText)
+
     }
     
 

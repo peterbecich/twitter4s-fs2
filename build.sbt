@@ -4,7 +4,7 @@ scalaVersion := "2.12.4"
 
 name := "twitter4s-fs2"
 organization := "com.danielasfregola"
-version := "1.0"
+version := "1.0-SNAPSHOT"
 
 val AkkaHttpJson4s = "1.20.0-RC1"
 val FS2 = "0.10.0-RC1"
