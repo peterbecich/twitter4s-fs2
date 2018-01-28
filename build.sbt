@@ -6,6 +6,8 @@ name := "twitter4s-fs2"
 organization := "com.danielasfregola"
 version := "1.0-SNAPSHOT"
 
+maintainer := "Peter Becich <peterbecich@gmail.com>"
+
 val AkkaHttpJson4s = "1.20.0-RC1"
 val FS2 = "0.10.0-RC1"
 val Twitter4s = "5.3"
