@@ -1,4 +1,4 @@
-package com.danielasfregola.twitter4s.http.clients.streaming
+package com.danielasfregola.twitter4s.fs2.http.clients.streaming
 
 import java.util.UUID
 
@@ -12,6 +12,10 @@ import com.danielasfregola.twitter4s.entities.{AccessToken, ConsumerToken}
 import com.danielasfregola.twitter4s.exceptions.TwitterException
 import com.danielasfregola.twitter4s.http.clients.OAuthClient
 import com.danielasfregola.twitter4s.http.oauth.OAuth2Provider
+import com.danielasfregola.twitter4s.http.clients.streaming.TwitterStream
+import com.danielasfregola.twitter4s.http.clients.streaming.StreamingClient
+
+
 import org.json4s.native.Serialization
 
 import scala.concurrent.Future

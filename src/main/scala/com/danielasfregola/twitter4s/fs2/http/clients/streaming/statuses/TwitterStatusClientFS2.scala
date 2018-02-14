@@ -1,4 +1,4 @@
-package com.danielasfregola.twitter4s
+package com.danielasfregola.twitter4s.fs2
 package http.clients.streaming.statuses
 
 import com.danielasfregola.twitter4s.entities.streaming.StreamingMessage
@@ -8,8 +8,10 @@ import com.danielasfregola.twitter4s.entities.enums.Language.Language
 import com.danielasfregola.twitter4s.entities.streaming.CommonStreamingMessage
 import com.danielasfregola.twitter4s.http.clients.streaming.statuses.parameters._
 import com.danielasfregola.twitter4s.http.clients.streaming.{StreamingClient, TwitterStream}
-import com.danielasfregola.twitter4s.http.clients.streaming.FS2._
+import com.danielasfregola.twitter4s.fs2.http.clients.streaming.FS2._
 import com.danielasfregola.twitter4s.util.Configurations._
+import com.danielasfregola.twitter4s.http.clients.streaming.statuses.StreamingClient
+
 
 import cats.effect.IO
 import scala.concurrent.Future
