@@ -11,6 +11,7 @@ import com.danielasfregola.twitter4s.http.clients.streaming.{StreamingClient, Tw
 import com.danielasfregola.twitter4s.fs2.http.clients.streaming.FS2._
 import com.danielasfregola.twitter4s.util.Configurations._
 import com.danielasfregola.twitter4s.http.clients.streaming.statuses.StreamingClient
+import com.danielasfregola.twitter4s.http.clients.streaming.statuses.TwitterStatusClient
 
 
 import cats.effect.IO
