@@ -4,13 +4,13 @@ scalaVersion := "2.12.4"
 
 name := "twitter4s-fs2"
 organization := "com.danielasfregola"
-version := "1.0-SNAPSHOT"
+version := "5.4-SNAPSHOT"
 
 // maintainer := "Peter Becich <peterbecich@gmail.com>"
 
-val AkkaHttpJson4s = "1.20.0-RC1"
-val FS2 = "0.10.0-RC1"
-val Twitter4s = "5.3"
+val AkkaHttpJson4s = "1.20.0-RC2"
+val FS2 = "0.10.1"
+val Twitter4s = "5.4"
 
 libraryDependencies ++= Seq(
   "org.typelevel" %% "cats-core" % "1.0.1",
